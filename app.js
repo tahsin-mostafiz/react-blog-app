@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// define routes
 var index = require('./routes/index');
 var api = require('./routes/api');
 var admin = require('./routes/admin');
@@ -32,6 +33,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // initialize routes
+app.use(app.router);
+routes.initialize(app);
+
 app.use('/', index);
 app.use('/api', api);
 app.use('/admin', admin);

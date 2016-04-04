@@ -24,6 +24,5 @@
     "webpack": "^1.12.14"
   },
   "devDependencies": {
-    "webpack": "^1.12.14"
   }
 }
