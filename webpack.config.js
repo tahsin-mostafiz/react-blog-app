@@ -6,7 +6,7 @@ var commonsPlugin =
 module.exports = {
     devtool: 'eval',
     entry: {
-
+        Header: path.join(__dirname, './public/javascripts/Components/Header'),
     },
     output : {
         path: path.join(__dirname, './public/javascripts/dist'),

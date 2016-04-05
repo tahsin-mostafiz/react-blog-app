@@ -32,15 +32,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// [IMP] - you can only initiate routes that you have created!
 // initialize routes
-app.use(app.router);
-routes.initialize(app);
-
 app.use('/', index);
-app.use('/api', api);
-app.use('/admin', admin);
-app.use('/posts', posts);
-app.use('/projects', projects);
+// app.use('/api', api);
+// app.use('/admin', admin);
+// app.use('/posts', posts);
+// app.use('/projects', projects);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
